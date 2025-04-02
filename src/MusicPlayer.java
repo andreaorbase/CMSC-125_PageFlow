@@ -23,7 +23,7 @@ public class MusicPlayer {
     }
 
     public void play() {
-        //clip.setMicrosecondPosition(0);
+      
         clip.start();
         status = "play";
     }

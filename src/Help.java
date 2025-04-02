@@ -212,7 +212,6 @@ public class Help extends javax.swing.JPanel {
         help_mfu.setBounds(350, 580, 282, 33);
 
 
-        // INFORMATION
         algo_info.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         algo_info.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/algorithm_info/algo_description.png"))); 
         algo_info.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -265,7 +264,6 @@ public class Help extends javax.swing.JPanel {
         System.exit(0);
     }
 
-    // ALGORITHMS
     private void help_fifoMouseEntered(java.awt.event.MouseEvent evt) {
         help_fifo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/algorithm_info/FIFO_hover.png")));
         algo_info.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/algorithm_info/FIFO_info.png")));

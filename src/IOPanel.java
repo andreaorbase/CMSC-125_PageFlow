@@ -56,20 +56,19 @@ class CenterTextRenderer extends DefaultTableCellRenderer {
             int row, int column) {
 
         Component cellComponent = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
-        // final Border border = BorderFactory.createMatteBorder(1, 1, 1, 1, Color.GRAY);
+       
         setHorizontalAlignment(SwingConstants.CENTER);
-        // cellComponent.setBackground(Color.gray);
-        // ((JComponent) cellComponent).setBorder(border);
+        
 
         if (desiredColumn == 0 && desiredRow == 0) {
             cellComponent.setBackground(table.getBackground());
         }
 
         if (row == desiredRow && column == desiredColumn) {
-            // Set the background color of the cell
+            
             cellComponent.setBackground(Color.YELLOW);
         } else {
-            // Reset the background color to the default
+            
             cellComponent.setBackground(table.getBackground());
         }
         if (row == rows) {
@@ -713,7 +712,6 @@ public class IOPanel extends javax.swing.JPanel {
 
             FileNameExtensionFilter selectedFilter = (FileNameExtensionFilter) fileChooser.getFileFilter();
 
-            // Process the selected file filter
             String filterDescription = selectedFilter.getDescription();
 
             
@@ -724,11 +722,11 @@ public class IOPanel extends javax.swing.JPanel {
                 String fileName = filterDescription + ".png";
                 File file = new File(fileName);
 
-                // Check if the file already exists
+            
                 while (file.exists()) {
-                    fileNumber++; // Increment the file number
+                    fileNumber++; 
 
-                    // Generate a new file name
+                    
                     fileName = filterDescription + String.format("%03d", fileNumber) + ".png";
                     file = new File(fileName);
                 }
@@ -766,11 +764,11 @@ public class IOPanel extends javax.swing.JPanel {
                 String fileName = fileToSave.getAbsolutePath() + ".png";
                 File file = new File(fileName);
 
-                // Check if the file already exists
+                
                 while (file.exists()) {
-                    fileNumber++; // Increment the file number
+                    fileNumber++; 
 
-                    // Generate a new file name
+                    
                     fileName = fileToSave.getAbsolutePath() + String.format("%03d", fileNumber) + ".png";
                     file = new File(fileName);
                 }
@@ -821,7 +819,7 @@ public class IOPanel extends javax.swing.JPanel {
             }
         }
 
-        // 
+        
 
         io_reference_input.setText(array_string);
         main_Array = new int[random_Array.length];
@@ -964,7 +962,7 @@ public class IOPanel extends javax.swing.JPanel {
         
         try (Scanner read = new Scanner(values)) {
             flag = true;
-            // main_array loading - contains arrays
+           
             main_Array = new int[int_values];
             for (int i = 0; i < int_values; i++) {
                 main_Array[i] = read.nextInt();
@@ -1037,7 +1035,7 @@ public class IOPanel extends javax.swing.JPanel {
         
         try (Scanner read = new Scanner(values)) {
             flag = true;
-            // main_array loading - contains arrays
+            
             main_Array = new int[int_values];
             for (int i = 0; i < int_values; i++) {
                 main_Array[i] = read.nextInt();
@@ -1047,10 +1045,10 @@ public class IOPanel extends javax.swing.JPanel {
                     return;
                 }
             }
-            // selected algo
+           
             Selected = io_algorithm_select.getSelectedIndex();
 
-            // table creation
+           
             create_table(main_Array, Selected, current_frames);
 
             boolean[] hitMatrix;
@@ -1061,7 +1059,7 @@ public class IOPanel extends javax.swing.JPanel {
                     FIFO fifo = new FIFO(main_Array, main_Array.length, current_frames);
                     hitMatrix = fifo.getHitMatrix();
                     framesMatrix = fifo.getFramesMatrix();
-                    // framesMatrix[numofpages][framesize]
+                    
                     
 
                     initiate_print(hitMatrix, framesMatrix);
@@ -1071,42 +1069,42 @@ public class IOPanel extends javax.swing.JPanel {
                     LRU lru = new LRU(main_Array, main_Array.length, current_frames);
                     hitMatrix = lru.getHitMatrix();
                     framesMatrix = lru.getFramesMatrix();
-                    // framesMatrix[numofpages][framesize]
+                    
                     initiate_print(hitMatrix, framesMatrix);
                     break;
                 case 2:
                     OPT opt = new OPT(main_Array, main_Array.length, current_frames);
                     hitMatrix = opt.getHitMatrix();
                     framesMatrix = opt.getFramesMatrix();
-                    // framesMatrix[numofpages][framesize]
+                    
                     initiate_print(hitMatrix, framesMatrix);
                     break;
                 case 3:
                     SC sc = new SC(main_Array, main_Array.length, current_frames);
                     hitMatrix = sc.getHitMatrix();
                     framesMatrix = sc.getFramesMatrix();
-                    // framesMatrix[numofpages][framesize]
+                    
                     initiate_print(hitMatrix, framesMatrix);
                     break;
                 case 4:
                     ESC esc = new ESC(main_Array, main_Array.length, current_frames);
                     hitMatrix = esc.getHitMatrix();
                     framesMatrix = esc.getFramesMatrix();
-                    // framesMatrix[numofpages][framesize]
+                    
                     initiate_print(hitMatrix, framesMatrix);
                     break;
                 case 5:
                     LFU lfu = new LFU(main_Array, main_Array.length, current_frames);
                     hitMatrix = lfu.getHitMatrix();
                     framesMatrix = lfu.getFramesMatrix();
-                    // framesMatrix[numofpages][framesize]
+                    
                     initiate_print(hitMatrix, framesMatrix);
                     break;
                 case 6:
                     MFU mfu = new MFU(main_Array, main_Array.length, current_frames);
                     hitMatrix = mfu.getHitMatrix();
                     framesMatrix = mfu.getFramesMatrix();
-                    // framesMatrix[numofpages][framesize]
+                    
                     initiate_print(hitMatrix, framesMatrix);
                     break;
             }
@@ -1117,7 +1115,7 @@ public class IOPanel extends javax.swing.JPanel {
 
     private void initiate_print(boolean[] hitMatrix, int[][] framesMatrix) {
         timer = new Timer((int) (500 / current_speed), new ActionListener() {
-            // matrix + hits
+           
             int faults = 0;
             int col = 0;
 
@@ -1139,7 +1137,6 @@ public class IOPanel extends javax.swing.JPanel {
                             results_table.setValueAt(" ", (current_frames - 1) - row, col);
                         } else {
                             if (main_Array[col] == framesMatrix[col][row]) {
-                                // edit table highlight here
                                 
                                 desiredRow = (current_frames - 1) - row;
                                 desiredColumn = col;

@@ -69,7 +69,7 @@ public class FullOutput extends javax.swing.JPanel {
     public void create_tables() {
         mainPanel.setBounds(60, 90, 960, 560);
         mainPanel.setLayout(new BorderLayout());
-            int spacing = 20; // Adjust the spacing as desired
+            int spacing = 20; 
             String [] algorithms = {"First in First Out", "Least Recently Used", "Optimal Page Replacement", "Second Chance Algorithm", "Enhanced Second Chance Algorithm", "Least Frequency Used", "Most Frequency Used"};
             global_header = new String [PageFlow.IO.main_Array.length];
 
@@ -84,7 +84,7 @@ public class FullOutput extends javax.swing.JPanel {
             for(int x = 0; x < global_header.length; x++){
                 global_header[x] = String.valueOf(PageFlow.IO.main_Array[x]);
             }
-            // char[][] hitMatrix;
+            
             for (int i = 0; i < 7; i++) {
                 switch(i){
                     case 0:
@@ -152,7 +152,7 @@ public class FullOutput extends javax.swing.JPanel {
                 TableCellRenderer renderer = results_header.getDefaultRenderer();
                 ((JLabel) renderer).setHorizontalAlignment(SwingConstants.CENTER);
                 
-                // Create a scroll pane for the table
+                
                 for(int a = 0; a < PageFlow.IO.main_Array.length; a++){
                     int current_frames = PageFlow.IO.current_frames;
                     if(hitMatrix[a] == false){
@@ -171,7 +171,7 @@ public class FullOutput extends javax.swing.JPanel {
                         }
                     }
                 }
-                // Add spacing between the scroll panes
+            
                 if (i > 0) {
                     panel.add(Box.createRigidArea(new Dimension(0, spacing)));
                 }
@@ -184,14 +184,14 @@ public class FullOutput extends javax.swing.JPanel {
 
                 panel.add(box);
             }
-        // Add an empty border around the panel to create additional spacing
+        
         panel.setBorder(new EmptyBorder(spacing, spacing, spacing, spacing));
 
         panel.setAlignmentX(Component.LEFT_ALIGNMENT);
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         panel.setBackground(Color.WHITE);
 
-        // Add the panel to the main panel
+        
         mainPanel.add(panel, BorderLayout.CENTER);
         
 
@@ -363,7 +363,6 @@ public class FullOutput extends javax.swing.JPanel {
             File fileToSave = fileChooser.getSelectedFile();
             FileNameExtensionFilter selectedFilter = (FileNameExtensionFilter) fileChooser.getFileFilter();
 
-            // Process the selected file filter
             String filterDescription = selectedFilter.getDescription();
 
             if (filterDescription.equals(".pdf")) {
@@ -373,11 +372,8 @@ public class FullOutput extends javax.swing.JPanel {
                 String pdfName = fileToSave.getAbsolutePath() + ".pdf";
                 File filePDF = new File(pdfName);
 
-                // Check if the file already exists
                 while (filePDF.exists()) {
-                    fileNumber++; // Increment the file number
-
-                    // Generate a new file name
+                    fileNumber++;
                     pdfName = fileToSave.getAbsolutePath() + String.format("%03d", fileNumber) + ".pdf";
                     filePDF = new File(fileName);
                 }
@@ -408,7 +404,6 @@ public class FullOutput extends javax.swing.JPanel {
                 String fileName = fileToSave.getAbsolutePath() + ".png";
                 File file = new File(fileName);
 
-                // Check if the file already exists
                 while (file.exists()) {
                     fileNumber++;
                     fileName = fileToSave.getAbsolutePath() + String.format("%03d", fileNumber) + ".png";
@@ -420,25 +415,12 @@ public class FullOutput extends javax.swing.JPanel {
     }
 
     private static void saveJScrollPaneAsImage(JScrollPane scrollPane, String filename) {
-        // Get the panel or component contained in the JScrollPane
         JComponent component = (JComponent) scrollPane.getViewport().getView();
-
-        // Get the size of the panel or component
         Dimension size = component.getSize();
-
-        // Create a BufferedImage with the size of the panel or component
         BufferedImage image = new BufferedImage(size.width, size.height, BufferedImage.TYPE_INT_RGB);
-
-        // Create a Graphics2D object from the image
         Graphics2D graphics = image.createGraphics();
-
-        // Paint the panel or component onto the image
         component.paint(graphics);
-
-        // Dispose the graphics object
         graphics.dispose();
-
-        // Save the image to a file
         try {
             ImageIO.write(image, "png", new File(filename));
             
