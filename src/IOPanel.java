@@ -66,7 +66,7 @@ class CenterTextRenderer extends DefaultTableCellRenderer {
 
         if (row == desiredRow && column == desiredColumn) {
             
-            cellComponent.setBackground(Color.BLUE);
+            cellComponent.setBackground(Color.CYAN);
         } else {
             
             cellComponent.setBackground(table.getBackground());
