@@ -12,7 +12,7 @@
   - [License](#license)
 
 ## Overview
-**PageFlow** is a feature-rich Java GUI application that simulates and visualizes seven classic page replacement algorithms:
+**PageFlow** is a visual simulator for page replacement algorithms designed to help users understand how different strategies manage memory. It graphically illustrates how pages are loaded, replaced, and evicted from memory using the algorithms mentioned below. Users can input custom reference strings, adjust frame sizes, track hits/misses, and step through each operation to see how faults occur. PageFlow is ideal for anyone who want an interactive way to grasp memory management concepts in operating systems.
 
 ## Algorithms
 - FIFO (First-In, First-Out)  
@@ -22,8 +22,6 @@
 - ESC (Enhanced Second Chance)  
 - LFU (Least Frequently Used)  
 - MFU (Most Frequently Used)
-
-It offers a visual and interactive way to understand how these algorithms manage memory, track hits/misses, and perform under different conditions.
 
 ## Features
 - Interactive Java Swing GUI  
