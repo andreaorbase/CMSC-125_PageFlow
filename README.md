@@ -25,14 +25,14 @@
 
 ## Features
 - Interactive Java Swing GUI  
-- Frame-by-frame simulation with animation  
-- Hit/Miss feedback and fault counters  
-- Import page references via `.txt` file  
-- Generate random input  
-- ⏱Adjustable simulation speed  
-- Compare all 7 algorithms side-by-side  
+- Frame-by-frame simulation with animation
+- Adjustable simulation speed
+- Import page references via `.txt` file
+- Generate random input
 - Export results as **PNG** or **PDF**  
-- Sound effects and background music
+- Real-time Hit/Miss indicators
+- Fault counters for each algorithm
+- Side-by-side comparison of all 7 algorithms
 
 ## Getting Started
 
