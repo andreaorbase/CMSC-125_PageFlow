@@ -8,7 +8,7 @@
 - [Getting Started](#getting-started)
   - [Prerequites](#prerequisites)
   - [User System Flow](#user-system-flow)
-  - [Input Format](#input-format)
+  - [Preview](#preview)
 - [Contribution](#contribution)
   - [License](#license)
 
