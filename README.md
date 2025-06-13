@@ -11,8 +11,10 @@
 - [Contribution](#contribution)
   - [License](#license)
 
+## Overview
 **PageFlow** is a feature-rich Java GUI application that simulates and visualizes seven classic page replacement algorithms:
 
+## Algorithms
 - FIFO (First-In, First-Out)  
 - LRU (Least Recently Used)  
 - OPT (Optimal Page Replacement)  
@@ -23,25 +25,20 @@
 
 It offers a visual and interactive way to understand how these algorithms manage memory, track hits/misses, and perform under different conditions.
 
----
+## Features
+- Interactive Java Swing GUI  
+- Frame-by-frame simulation with animation  
+- Hit/Miss feedback and fault counters  
+- Import page references via `.txt` file  
+- Generate random input  
+- ⏱Adjustable simulation speed  
+- Compare all 7 algorithms side-by-side  
+- Export results as **PNG** or **PDF**  
+- Sound effects and background music
 
-## 🖥️ Features
+## Getting Started
 
-- 🎮 Interactive Java Swing GUI  
-- 🧠 Frame-by-frame simulation with animation  
-- 🎯 Hit/Miss feedback and fault counters  
-- 📁 Import page references via `.txt` file  
-- 🔀 Generate random input  
-- ⏱️ Adjustable simulation speed  
-- 📊 Compare all 7 algorithms side-by-side  
-- 📤 Export results as **PNG** or **PDF**  
-- 🔊 Sound effects and background music
-
----
-
-## 🚀 Getting Started
-
-### ✅ Requirements
+### Requirements
 
 - Java JDK 8 or higher
 - IDE (IntelliJ, Eclipse, etc.) or terminal setup
