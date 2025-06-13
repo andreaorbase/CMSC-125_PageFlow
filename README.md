@@ -63,8 +63,6 @@ java -cp src PageFlow
 
 > Make sure the `resources/gui/` folder (images, sounds, fonts) is on your classpath when running.
 
----
-
 ### Input Format (For Import Files)
 
 ```
@@ -79,11 +77,9 @@ Where:
 - `FIFO` is the selected algorithm
 - `7 0 1...` is the reference string
 
----
-
 ## Contribution
-Developed by: *EMILINE ACOMPAÑADO, ANDREA ORBASE, RICHARD BISCANTE*  
-For: *CMSC 125*  
+Developed by: **Emiline Acompañado, Andrea Mae Orbase, Richard Biscante**
+As partial fulfillment of CMSC 125
 
 ### License
 This project is open-source and intended for academic and educational use.  
