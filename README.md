@@ -77,7 +77,7 @@ Where:
 - `7 0 1...` is the reference string
 
 ### Preview
-![PageFlow Preview](images/pageflow_preview.png)
+![PageFlow Preview](src/gui/pageflow-preview.png)
 
 ## Contribution
 Developed by: **Emiline Acompañado, Andrea Mae Orbase, Richard Biscante**
