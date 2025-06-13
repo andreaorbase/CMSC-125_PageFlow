@@ -8,6 +8,7 @@
 - [Getting Started](#getting-started)
   - [Prerequites](#prerequisites)
   - [User System Flow](#user-system-flow)
+  - [Input Format](#input-format)
 - [Contribution](#contribution)
   - [License](#license)
 
@@ -36,12 +37,15 @@
 
 ## Getting Started
 
-### Requirements
+### Prerequisites
 
-- Java JDK 8 or higher
-- IDE (IntelliJ, Eclipse, etc.) or terminal setup
+To run **PageFlow**, ensure the following are installed or available:
 
-### ▶️ Run Instructions
+- **Java Development Kit (JDK) 21** or later  
+- A system that supports running `.exe` or `.jar` files  
+- *Optional:* Java Runtime Environment (JRE) for running `.jar` without compiling
+
+### Run Instructions
 
 1. Clone the repository:
    ```bash
@@ -57,11 +61,11 @@ javac -cp . src/**/*.java
 java -cp src PageFlow
 ```
 
-> ⚠️ Make sure the `resources/gui/` folder (images, sounds, fonts) is on your classpath when running.
+> Make sure the `resources/gui/` folder (images, sounds, fonts) is on your classpath when running.
 
 ---
 
-## 📄 Input Format (For Import Files)
+### Input Format (For Import Files)
 
 ```
 3
@@ -77,14 +81,10 @@ Where:
 
 ---
 
-## 👨‍💻 Author & Acknowledgments
-
+## Contribution
 Developed by: *EMILINE ACOMPAÑADO, ANDREA ORBASE, RICHARD BISCANTE*  
 For: *CMSC 125*  
 
----
-
-## 📃 License
-
+### License
 This project is open-source and intended for academic and educational use.  
 Feel free to reuse with attribution.
