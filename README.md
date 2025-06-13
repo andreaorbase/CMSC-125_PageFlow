@@ -80,8 +80,8 @@ Where:
 ![PageFlow Preview](src/gui/pageflow-preview.png)
 
 ## Contribution
-Developed by: **Emiline Acompañado, Andrea Mae Orbase, Richard Biscante**
-As partial fulfillment of CMSC 125
+Developed by **Emiline Acompañado, Andrea Mae Orbase, Richard Biscante**
+as partial fulfillment of CMSC 125
 
 ### License
 This project is open-source and intended for academic and educational use.  
