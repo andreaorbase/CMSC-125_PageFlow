@@ -68,7 +68,6 @@ java -cp src PageFlow
 ```
 3
 FIFO
---
 7 0 1 2 0 3 0 4
 ```
 
@@ -76,6 +75,9 @@ Where:
 - `3` is the number of frames
 - `FIFO` is the selected algorithm
 - `7 0 1...` is the reference string
+
+### Preview
+![PageFlow Preview](images/pageflow_preview.png)
 
 ## Contribution
 Developed by: **Emiline Acompañado, Andrea Mae Orbase, Richard Biscante**
