@@ -1,4 +1,4 @@
-# 📄 PageFlow: Page Replacement Algorithm Visual Simulator
+# PageFlow: Page Replacement Algorithm Visual Simulator
 
 **PageFlow** is a feature-rich Java GUI application that simulates and visualizes seven classic page replacement algorithms:
 
